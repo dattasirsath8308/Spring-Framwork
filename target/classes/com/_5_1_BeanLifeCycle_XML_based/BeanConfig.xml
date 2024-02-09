@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--XML Namespace and Schema Definitions: xmlns="http://www.springframework.org/schema/beans": 
+	This declares the default namespace for the XML file, specifying that the 
+	elements without a namespace prefix are part of the Spring Beans namespace. 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance": This declares the 
+	XML Schema Instance namespace. xmlns:p="http://www.springframework.org/schema/p": 
+	This declares a custom namespace prefix (p) for the "p" namespace. It's used 
+	for concise property-based element configuration. xsi:schemaLocation: This 
+	attribute specifies the location of the XML Schema Definitions (XSD) for 
+	the declared namespaces. It's a space-separated list of namespace-URL pairs. -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+">
+
+	
+	
+	<bean id="routine" class="com._5_1_BeanLifeCycle_XML_based.DailyRoutine" init-method="Morning" destroy-method="Night">
+			
+			<property name="Name" value="Nikhil" />
+			
+	</bean>
+	
+	
+	      
+      
+
+</beans>
+

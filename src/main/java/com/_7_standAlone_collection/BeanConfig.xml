@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   
+   	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+   
+
+">
+
+	
+	
+	<!-- Standalone List -->
+	<util:list list-class="java.util.LinkedList"
+		id="mybestfriend">
+
+		<value>Nagesh</value>
+		<value>Macho</value>
+
+	</util:list>
+
+	<!-- Standalone Map -->
+	<util:map map-class="java.util.LinkedHashMap" id="Target">
+		<entry key="Software Developer" value="1" />
+		<entry key="Bike" value="2" />
+		<entry key="Travel" value="3" />
+	</util:map>
+
+	<!-- Standalone Properties -->
+
+	<util:properties id="dbConfig">
+		<prop key="driver">com.mysql.jdbc.Driver</prop>
+		<prop key="username">root</prop>
+		<prop key="password">root</prop>
+		<prop key="url">mysql:jdbc://localhost:3306/database</prop>
+	</util:properties>
+	
+	
+
+
+	<bean name="p1" class="com._7_standAlone_collection.Person">
+
+		<property name="friends" ref="mybestfriend" />
+		<property name="goals" ref="Target" />
+		<property name="dbconn" ref="dbConfig" />
+		
+		
+		
+	</bean>
+
+
+
+
+</beans>
+
